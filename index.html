@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Website is Useless</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Helvetica, Arial, sans-serif;
+            background: linear-gradient(90deg, #191970, #800080);
+            background-size: 200% 200%;
+            animation: gradientAnimation 5s linear infinite;
+            opacity: 0; /* Initially set to be invisible */
+            transition: opacity 2s ease-in-out; /* Transition for 2 seconds */
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 80px;
+            font-weight: normal;
+        }
+
+        p {
+            text-align: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        /* Additional CSS for decreasing the font size of "Arman and Anna" */
+        .names {
+            font-size: 18px;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Additional CSS for transitioning to visible */
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>this website is useless.</h1>
+    <p>we spent 36 hours at PennApps XXIV and this is all we have.</p>
+    <p class="names">Arman and Anna</p>
+
+    <script>
+        // Add a script to apply the 'loaded' class after 2 seconds
+        setTimeout(function () {
+            document.body.classList.add('loaded');
+        }, 2000);
+    </script>
+</body>
+</html>
